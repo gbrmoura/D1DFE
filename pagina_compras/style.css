@@ -1,0 +1,108 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utils */
+.items-center {
+    display: flex;
+    align-items: center;
+}
+
+.border-solid {
+    border: 1px solid black ;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.input-group input {
+    width: fit-content;
+}
+
+.input-group textarea {
+    width: fit-content;
+}
+
+.input-group label input {
+    margin: 0.5rem 0;
+}
+
+
+.font-bold {
+    font-weight: 600;
+}
+
+/* Meus Dados */
+#meus_dados fieldset {
+    margin: 0;
+}
+
+/* Minhas Compras */
+#minhas_compras {
+    display: grid;
+}
+
+.minhas-compras-table {
+    width: 100%;
+    text-align: start;
+    padding: 0.5rem;
+}
+
+.minhas-compras-table th, td {
+    font-weight: 500;
+    text-align: start;
+    padding-left: 1rem;
+}
+
+.minhas-compras-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+}
+
+.minhas-compras-card h3 {
+    max-width: 85%;
+    padding: 0;
+}
+
+.minhas-compras-card .items-center div {
+    margin: 0 0 0 1rem;
+}
+
+.minhas-compras-card img {
+    height: 70px;
+    width: 100px;
+}
+
+.detalhes-pagamento-envio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 0;
+}
+
+.detalhes-pagamento-envio div p, h3 {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+/* Avaliar Produto */
+#avaliar_produto .color-input {
+    width: 50px;
+}
+
+#avaliar_produto fieldset {
+    margin: 0;
+}
+
+/* Dialog */
+
+#dialog_product_details h3, p {
+    padding: 0;
+    margin: 0;
+}
