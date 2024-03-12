@@ -21,33 +21,48 @@
         <fieldset>
           <legend>Dados da conta</legend>
           <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="ex: seuemail@gmail.com" />
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="ex: seuemail@gmail.com"
+            />
           </div>
           <div>
-            <input type="checkbox" />
-            <label>Quero receber e-mails promocionais</label>
+            <input id="receber_emails" type="checkbox" />
+            <label for="receber_emails"
+              >Quero receber e-mails promocionais</label
+            >
           </div>
           <div class="input-group">
-            <label>Senha</label>
-            <input type="password" placeholder="use uma senha forte" />
+            <label for="senha">Senha</label>
+            <input
+              id="senha"
+              type="password"
+              placeholder="use uma senha forte"
+            />
           </div>
         </fieldset>
         <fieldset>
           <legend>Dados pessoais</legend>
           <div class="input-group">
-            <label>Nome Completo</label>
-            <input type="text" placeholder="ex: João da Silva" />
+            <label for="nome_completo">Nome Completo</label>
+            <input
+              id="nome_completo"
+              type="text"
+              placeholder="ex: João da Silva"
+            />
           </div>
           <div class="input-group">
-            <label>Como gostaria que a gente te chamasse? (opcional)</label>
-            <input type="text" placeholder="Joãozin" />
+            <label for="apelido"
+              >Como gostaria que a gente te chamasse? (opcional)</label
+            >
+            <input id="apelido" type="text" placeholder="Joãozin" />
           </div>
         </fieldset>
         <button>Salvar Alterações</button>
       </form>
     </section>
-    <hr />
     <section id="minhas_compras">
       <h2>Minhas Compras</h2>
       <table class="minhas-compras-table border-solid">
@@ -64,23 +79,28 @@
           <td>12/12/2020</td>
           <td>Cartão de crédito</td>
           <td>
-            <button onclick="dialog_product_details.show()">Rastreio detalhado</button>
+            <button onclick="dialog_product_details.show()"
+              >Rastreio detalhado</button
+            >
             <dialog id="dialog_product_details">
-				<h3>Rastreio detalhado</h3>
-				<p>Seu pedido foi entregue com sucesso!</p>
-				<p>Entregue por: GFL</p>
-				<p>Codigo de Rastreio: 123456789</p>
-				<p>Entregue em: 12/12/2020</p>
-				<form method="dialog">
-					<button>Fechar</button>
-				</form>
-			</dialog>
+              <h3>Rastreio detalhado</h3>
+              <p>Seu pedido foi entregue com sucesso!</p>
+              <p>Entregue por: GFL</p>
+              <p>Codigo de Rastreio: 123456789</p>
+              <p>Entregue em: 12/12/2020</p>
+              <form method="dialog">
+                <button>Fechar</button>
+              </form>
+            </dialog>
           </td>
         </tr>
       </table>
       <div class="minhas-compras-card border-solid">
         <div class="items-center">
-          <img src="assets/braco_articulado.jpeg" alt="Braçõ Articulado para Monitor e Notebook"/>
+          <img
+            src="assets/braco_articulado.jpeg"
+            alt="Braçõ Articulado para Monitor e Notebook"
+          />
           <div>
             <h3>
               Suporte Articulado para Monitor e Notebook de 13 a 32 Vinik,
@@ -90,7 +110,7 @@
             <a href="#avaliar_produto">Avaliar Produto</a>
           </div>
         </div>
-		<p>R$ 99,90</p>
+        <p>R$ 99,90</p>
       </div>
       <details>
         <summary>Detalhes do pagamento e envio</summary>
@@ -116,55 +136,95 @@
         </div>
       </details>
     </section>
-    <hr />
     <section id="avaliar_produto">
       <h2>Avaliação do Produto</h2>
       <form>
         <fieldset>
           <legend>Opinião sobre o produto</legend>
           <div class="input-group">
-            <label class="font-bold">Qual cor do produto mais te agrada?</label>
-            <input list="product_color" class="color-input" type="color" />
-			<datalist id="product_color"></datalist>
+            <label for="cor_produto" class="font-bold"
+              >Qual cor do produto mais te agrada?</label
+            >
+            <input
+              id="cor_produto"
+              list="product_color"
+              class="color-input"
+              type="color"
+            />
+            <datalist id="product_color"></datalist>
           </div>
           <div class="input-group">
             <label class="font-bold">O produto é de qualidade?</label>
-            <label><input type="radio" value="0" name="product_quality" />Concordo Totalmente</label>
-            <label><input type="radio" value="1" name="product_quality" />Concordo</label>
-            <label><input type="radio" value="3" name="product_quality" />Não estoudecido</label>
-            <label><input type="radio" value="4" name="product_quality"/>Discordo</label>
-            <label><input type="radio" value="5" name="product_quality" />Discordo totalmente</label>
+            <label
+              ><input type="radio" value="0" name="product_quality" />Concordo
+              Totalmente</label
+            >
+            <label
+              ><input
+                type="radio"
+                value="1"
+                name="product_quality"
+              />Concordo</label
+            >
+            <label
+              ><input type="radio" value="3" name="product_quality" />Não
+              estoudecido</label
+            >
+            <label
+              ><input
+                type="radio"
+                value="4"
+                name="product_quality"
+              />Discordo</label
+            >
+            <label
+              ><input type="radio" value="5" name="product_quality" />Discordo
+              totalmente</label
+            >
           </div>
           <div class="input-group">
-            <label class="font-bold">Para você, quais parametros são mais importantes na qualidade do produto?</label>
+            <label class="font-bold"
+              >Para você, quais parametros são mais importantes na qualidade do
+              produto?</label
+            >
             <label><input type="checkbox" />Durabilidade</label>
-            <label><input type="checkbox" />Caracteristicas acessorias ou features</label>
+            <label
+              ><input type="checkbox" />Caracteristicas acessorias ou
+              features</label
+            >
             <label><input type="checkbox" />Confiabilidade</label>
             <label><input type="checkbox" />Aparencia</label>
           </div>
-		  <div class="input-group">
-            <label class="font-bold">Descreva a caracteristica que mais chamou sua atenção no produto?</label>
-            <input type="text" list="product_characteristics">
-			<datalist id="product_characteristics">
-				<option value="Cor"></option>
-				<option value="Tamanho"></option>
-				<option value="Peso"></option>
-				<option value="Material"></option>
-			</datalist>
+          <div class="input-group">
+            <label class="font-bold"
+              >Descreva a caracteristica que mais chamou sua atenção no
+              produto?</label
+            >
+            <input type="text" list="product_characteristics" />
+            <datalist id="product_characteristics">
+              <option value="Cor"></option>
+              <option value="Tamanho"></option>
+              <option value="Peso"></option>
+              <option value="Material"></option>
+            </datalist>
           </div>
         </fieldset>
         <fieldset>
           <legend>Condições atuais</legend>
           <div class="input-group">
-            <label class="font-bold">Adicione uma foto atual do produto</label>
-            <input type="file" />
+            <label for="arquivo" class="font-bold"
+              >Adicione uma foto atual do produto</label
+            >
+            <input id="arquivo" type="file" />
           </div>
           <div class="input-group">
-            <label class="font-bold">Data de Compra</label>
-            <input type="date" />
+            <label for="data_compra" class="font-bold">Data de Compra</label>
+            <input id="data_compra" type="date" />
           </div>
           <div class="input-group">
-            <label class="font-bold">Deixe um comentário sobre as condições do produto</label>
+            <label class="font-bold"
+              >Deixe um comentário sobre as condições do produto</label
+            >
             <textarea></textarea>
           </div>
         </fieldset>
