@@ -8,15 +8,15 @@ body {
     height: 100vh;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 100px auto 100px;
+    grid-template-columns: 200px auto 150px;
     grid-template-rows: 200px auto 100px;
     grid-template-areas: 
         "header header header"
-        "nav article article"
+        "nav article aside"
         "nav footer footer";
 }
 
-header, section, nav, footer {
+header, section, nav, footer, aside {
     background-color: lightblue;
     padding: 1rem;
 }
@@ -35,4 +35,8 @@ nav {
 
 footer {
     grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
 }
